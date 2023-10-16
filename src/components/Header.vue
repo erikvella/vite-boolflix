@@ -5,11 +5,19 @@ name:'Header'
 </script>
 
 <template>
-  <h1>questo è l'header</h1>
+  <header>
+    <div class="top-bar">
+      <h1 class="text-center py-3">BoolFlix</h1>
+    </div>
+  </header>
 </template>
 
 
 
-<style>
-
+<style lang="scss" scoped>
+header{
+  width: 100vw;
+  height: 90px;
+  background-color: rgb(160, 160, 160);
+}
 </style>
