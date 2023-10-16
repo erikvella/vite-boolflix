@@ -20,7 +20,7 @@ data(){
 
 methods:{
   getApi(){
-    axios.get('https://api.themoviedb.org/3/search/movie?api_key=9962f1aa715593ba3aaac38a4bb5036b&query=barbie'
+    axios.get(store.fullApi
 
     // {
     //   params:{
@@ -44,7 +44,7 @@ mounted(){
 }
 </script>
 
-
+<!-- inizio del template -->
 <template>
   
 

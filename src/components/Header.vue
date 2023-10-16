@@ -7,7 +7,7 @@ name:'Header'
 <template>
   <header>
     <div class="top-bar">
-      <h1 class="text-center py-3">BoolFlix</h1>
+      <h1 class="text-center py-3">PirateFlix</h1>
     </div>
   </header>
 </template>
