@@ -2,11 +2,7 @@
 export default {
 name:'Card',
 props:{
-  title: String,
-  originalTitle: String,
-  lenguage: String,
-  voto: Number,
-  image: String
+  item: Object
 }
 }
 
@@ -15,10 +11,14 @@ props:{
 <template>
   <div class="col-3 my-3">
     <div class="card">
-        <h1>{{ title }}</h1>
-        <h1>{{ originalTitle  }}</h1>
-        <h1>Lingua: {{ lenguage }}</h1>
-        <h1>Voto: {{ voto }}</h1>
+        <h3>{{ item.title || item.name}}</h3>
+        <h3>{{ item.original_title || item.original_name }}</h3>
+        <h3>Lingua: {{ item.original_language }}</h3>
+        <h3>Voto: {{ item.vote_average }}</h3>
+        <div>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
     </div>
   </div>
 </template>

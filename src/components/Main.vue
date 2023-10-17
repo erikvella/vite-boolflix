@@ -29,12 +29,9 @@ name:'Main'
     <h1 class="text-center my-3 ">{{ title }}</h1>
     <div class="container">
       <div class="row">
-        <Card v-for="card in store[type]"
-        :key="card.id" 
-        :title="card.title"
-        :originalTitle="card.original_title" 
-        :lenguage="card.original_language" 
-        :voto="card.vote_average" 
+        <Card v-for="item in store[type]"
+        :key="item.id" 
+        :item="item" 
         />
         
       </div>

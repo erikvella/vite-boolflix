@@ -56,7 +56,7 @@ mounted(){
   <Main title="Film" type="movie"
   v-if="store.movie.length > 0" />
   <Main title="Serie TV" type="tv"
-  v-if="store.movie.length > 0" />
+  v-if="store.tv.length > 0" />
 
     <h1 class="text-center" v-else>{{ message }}</h1>
 
