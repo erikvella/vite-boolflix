@@ -14,32 +14,36 @@ name : 'App',
 
 data(){
   return{
-    store
+    store,
+    message: 'Effettuare una ricerca'
   }
 },
 
 methods:{
-  getApi(){
-    axios.get(store.fullApi
+  getApi(type){
+    axios.get(store.apiUrl + type ,
 
-    // {
-    //   params:{
-    //     title:store.titleToSearch
-    //   }
-    // }
-    
-    )
+    {
+      params: store.apiParams
+    })
     .then(res => {
-      store.moviesList = res.data.results
-      console.log(store.moviesList);
+      store[type] = res.data.results;
+      console.log(store.movie);
+      if(store.movie.length === 0){
+        this.message = 'Film non disponibile!'
+      }
     })
     .catch(err =>{
       console.log(err);
     })
+  },
+  startSearch(){
+    this.getApi('movie')
+    this.getApi('tv')
   }
 },
 mounted(){
-  this.getApi()
+  
 }
 }
 </script>
@@ -48,8 +52,13 @@ mounted(){
 <template>
   
 
-  <Header />
-  <Main />
+  <Header @startSearch="startSearch" />
+  <Main title="Film" type="movie"
+  v-if="store.movie.length > 0" />
+  <Main title="Serie TV" type="tv"
+  v-if="store.movie.length > 0" />
+
+    <h1 class="text-center" v-else>{{ message }}</h1>
 
 
   

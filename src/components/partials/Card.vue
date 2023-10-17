@@ -5,7 +5,8 @@ props:{
   title: String,
   originalTitle: String,
   lenguage: String,
-  Voto: Number
+  voto: Number,
+  image: String
 }
 }
 
@@ -14,10 +15,10 @@ props:{
 <template>
   <div class="col-3 my-3">
     <div class="card">
-        <h1>Titolo</h1>
-        <h1>Titolo originale</h1>
-        <h1>Lingua</h1>
-        <h1>Voto</h1>
+        <h1>{{ title }}</h1>
+        <h1>{{ originalTitle  }}</h1>
+        <h1>Lingua: {{ lenguage }}</h1>
+        <h1>Voto: {{ voto }}</h1>
     </div>
   </div>
 </template>
