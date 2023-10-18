@@ -12,8 +12,8 @@ data(){
 
 <template>
   <header>
-    <div class="top-bar">
-      <h1 class="text-center py-3">PirateFlix</h1>
+    <div class="top-bar text-center py-4 ">
+      <img src="logo-boolflix.png" alt="logo">
     </div>
 
     <!-- inizio della search bar -->
@@ -38,7 +38,7 @@ data(){
   </div>
 
   <div class="col-3">
-    <button @click="$emit('startSearch')" class="btn btn-success">Cerca</button>
+    <button @click="$emit('startSearch')" class="btn btn-danger">Cerca</button>
   </div>
 </div>
 
@@ -52,6 +52,10 @@ data(){
 header{
   width: 100vw;
   height: 210px;
-  background-color: rgb(160, 160, 160);
+  background-color: rgb(37, 36, 36);
+}
+
+img{
+  height: 60px;
 }
 </style>
