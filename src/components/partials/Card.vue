@@ -47,7 +47,7 @@ props:{
         <!-- <h3>Voto: {{ item.vote_average }}</h3> -->
        <Stars class="m-10" :vote="item.vote_average" />
 
-       <p>Sinossi : {{ item.overview }}</p>
+       <p class="m-10">Sinossi : {{ item.overview }}</p>
      </div>
         
     </div>
@@ -73,6 +73,8 @@ props:{
 .poster{
   display: block;
   position: relative;
+  max-height: 450px;
+  overflow: hidden;
 }
 .info{
   display: none;
