@@ -26,7 +26,7 @@ name:'Main'
 
   <main>
     
-    <h1 class="text-center my-3 ">{{ title }}</h1>
+    <h1 class="text-center py-3 ">{{ title }}</h1>
     <div class="container">
       <div class="row">
         <Card v-for="item in store[type]"
@@ -46,5 +46,7 @@ name:'Main'
 
 
 <style lang="scss" scoped>
-
+main{
+  background-color: rgb(193, 185, 185);
+}
 </style>
