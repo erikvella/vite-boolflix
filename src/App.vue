@@ -38,8 +38,15 @@ methods:{
     })
   },
   startSearch(){
+    store.movie = [],
+    store.tv = []
+    if(store.type === ''){
     this.getApi('movie')
     this.getApi('tv')
+    }else{
+      this.getApi(store.type)
+    }
+    
   }
 },
 mounted(){
