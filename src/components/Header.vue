@@ -29,8 +29,7 @@ data(){
 
 
   <div class="col-3">
-    <select v-model="store.type" class="form-select" aria-label="Default select example">
-<option selected>Seleziona il tipo di prodotto</option>
+    <select v-model="store.type" class="form-select" >
 <option value="tv">Serie</option>
 <option value="movie">Film</option>
 <option value="">All</option>

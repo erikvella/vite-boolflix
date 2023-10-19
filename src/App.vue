@@ -20,8 +20,11 @@ data(){
 },
 
 methods:{
-  getApi(type){
-    axios.get(store.apiUrl + type ,
+  getApi(type , isPopular = false){
+
+    const apiUrl = !isPopular ? store.apiUrl + type : 'https://api.themoviedb.org/3/movie/popular';
+
+    axios.get(apiUrl  ,
 
     {
       params: store.apiParams
@@ -30,7 +33,7 @@ methods:{
       store[type] = res.data.results;
       console.log(store.movie);
       if(store.movie.length === 0){
-        this.message = 'Film non disponibile!'
+      this.message = 'Film non disponibile!'
       }
     })
     .catch(err =>{
@@ -50,7 +53,7 @@ methods:{
   }
 },
 mounted(){
-  
+  this.getApi('movie' , true )
 }
 }
 </script>
